@@ -1,7 +1,7 @@
 {
   "name": "redux-hooks",
   "version": "0.0.1",
-  "main": "src/index.js",
+  "main": "src/index.ts",
   "author": "vstatsura",
   "license": "MIT",
   "devDependencies": {
