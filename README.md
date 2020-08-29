@@ -1,5 +1,8 @@
 # Redux Hooks Next
 
+[![npm version](https://badge.fury.io/js/redux-hooks-next.svg)](https://badge.fury.io/js/react-navigation-hooks)
+
+
 ## Usage
 
 `yarn add redux react-redux`
@@ -10,7 +13,7 @@
 
 ### react-redux
 
-Reexport `useSelector, useDispatch, useStore` from `react-redux`
+Re-exported `useSelector, useDispatch, useStore` from `react-redux`
 
 ### useActions(...args)
 
@@ -53,6 +56,7 @@ function MyScreen() {
 
 const mapState = (state) => ({
     loading: state.loading,
+    ...
 });
 
 function MyScreen() {
