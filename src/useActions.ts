@@ -1,11 +1,11 @@
-import { bindActionCreators } from 'redux';
-import { useDispatch, shallowEqual } from 'react-redux';
+import { bindActionCreators, AnyAction } from 'redux';
+import { useDispatch } from 'react-redux';
 import { useMemo, useCallback } from 'react';
 
 
 export function useActions<A>(actions: A, deps?: []): A;
 
-export function useActions(actions: [] | {}, deps?: []) {
+export function useActions(actions: {} | [], deps?: []) {
   const dispatch = useDispatch()
   return useMemo(
     () => {
@@ -21,7 +21,7 @@ export function useActions(actions: [] | {}, deps?: []) {
 
 export function useAction<A>(actions: A): A;
 
-export function useAction(action: any) {
+export function useAction(action: AnyAction) {
 	const dispatch = useDispatch()
 	return useCallback(() => {
 		return bindActionCreators(action, dispatch);
