@@ -1,6 +1,6 @@
 {
   "name": "redux-hooks-next",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "React hooks for react-redux",
   "main": "src/index.ts",
   "author": "vstatsura",
