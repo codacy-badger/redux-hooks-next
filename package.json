@@ -1,13 +1,13 @@
 {
   "name": "redux-hooks-next",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React hooks for react-redux",
   "main": "src/index.ts",
   "author": "vstatsura",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vstatsura/redux-hooks"
+    "url": "git+https://github.com/vstatsura/redux-hooks-next"
   },
   "devDependencies": {
     "@types/react-redux": "^7.1.9",
