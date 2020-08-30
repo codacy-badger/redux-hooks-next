@@ -1,21 +1,50 @@
 {
   "name": "redux-hooks-next",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "React hooks for react-redux",
-  "main": "src/index.ts",
+  "main": "build/index.js",
+  "types": "build/typescript/index.d.ts",
   "author": "vstatsura",
   "license": "MIT",
+  "files": [
+    "dist/",
+    "src/",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rimraf ./build && tsc",
+    "lint": "tslint './src/**/*.ts'"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vstatsura/redux-hooks-next"
   },
   "devDependencies": {
     "@types/react-redux": "^7.1.9",
+    "husky": "^4.2.5",
+    "rimraf": "^3.0.2",
+    "tslint": "^6.1.3",
+    "tslint-config-airbnb": "^5.11.2",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^5.0.0",
     "typescript": "^4.0.2"
   },
   "peerDependencies": {
     "react": "*",
     "react-redux": "*",
     "redux": "*"
-  }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
+  },
+  "keywords": [
+    "redux",
+    "redux-hooks",
+    "react-redux-hooks",
+    "hooks",
+    "redux-hooks-next"
+  ]
 }
