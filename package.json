@@ -1,9 +1,9 @@
 {
   "name": "redux-hooks-next",
-  "version": "0.0.6",
+  "version": "0.0.9",
   "description": "React hooks for react-redux",
-  "main": "build/index.js",
-  "types": "build/typescript/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/typescript/index.d.ts",
   "author": "vstatsura",
   "license": "MIT",
   "files": [
@@ -13,7 +13,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "rimraf ./build && tsc",
+    "build": "rimraf ./dist && tsc",
     "lint": "tslint './src/**/*.ts'"
   },
   "repository": {
