@@ -2,10 +2,11 @@ import { bindActionCreators, AnyAction } from 'redux';
 import { useDispatch } from 'react-redux';
 import { useMemo, useCallback } from 'react';
 
+type DependencyList = ReadonlyArray<any>;
 
-export function useActions<A>(actions: A, deps?: []): A;
+export function useActions<A>(actions: A, deps?: DependencyList): A;
 
-export function useActions(actions: {} | [], deps?: []) {
+export function useActions(actions: {} | [], deps?: DependencyList) {
   const dispatch = useDispatch()
   return useMemo(
     () => {
@@ -14,16 +15,18 @@ export function useActions(actions: {} | [], deps?: []) {
 			}
 			return bindActionCreators(actions, dispatch);
     },
-    deps ? [dispatch, ...deps] : [dispatch]
+    deps ? [dispatch, ...deps] : [dispatch],
   )
 }
 
 
-export function useAction<A>(actions: A): A;
+export function useAction<A>(actions: A, deps?: DependencyList): A;
 
-export function useAction(action: AnyAction) {
+export function useAction(action: AnyAction, deps?: DependencyList) {
 	const dispatch = useDispatch()
 	return useCallback(() => {
 		return bindActionCreators(action, dispatch);
-	}, [dispatch]);
+	},
+		deps ? [dispatch, ...deps] : [dispatch],
+	)
 }
