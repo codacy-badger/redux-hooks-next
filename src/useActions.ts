@@ -1,6 +1,6 @@
-import { bindActionCreators, AnyAction } from 'redux';
+import { bindActionCreators } from 'redux';
 import { useDispatch } from 'react-redux';
-import { useMemo, useCallback } from 'react';
+import { useMemo } from 'react';
 
 type DependencyList = ReadonlyArray<any>;
 
@@ -19,13 +19,15 @@ export function useActions(actions: {} | [], deps?: DependencyList) {
 	)
 }
 
-export function useAction<A>(actions: A, deps?: DependencyList): A;
+// deprecated
 
-export function useAction(action: AnyAction, deps?: DependencyList) {
-	const dispatch = useDispatch()
-	return useCallback(() => {
-		return bindActionCreators(action, dispatch);
-	},
-		deps ? [dispatch, ...deps] : [dispatch],
-	)
-}
+// export function useAction<A>(actions: A, deps?: DependencyList): A;
+
+// export function useAction(action: AnyAction, deps?: DependencyList) {
+// 	const dispatch = useDispatch()
+// 	return useCallback(() => {
+// 		return bindActionCreators(action, dispatch);
+// 	},
+// 		deps ? [dispatch, ...deps] : [dispatch],
+// 	)
+// }

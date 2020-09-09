@@ -39,17 +39,6 @@ function MyScreen() {
 }
 ```
 
-### useAction(action)
-
-```js
-
-function MyScreen() {
-  const onAction = useAction(action);
-
-  return <button onClick={onAction}>click</button>;
-}
-```
-
 ### useState(...args)
 
 ```js

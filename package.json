@@ -1,6 +1,6 @@
 {
   "name": "redux-hooks-next",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "React hooks for react-redux",
   "main": "dist/index.js",
   "types": "dist/typescript/index.d.ts",
