@@ -2,6 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/redux-hooks-next.svg)](https://badge.fury.io/js/redux-hooks-next)
 
+[![CodeFactor](https://www.codefactor.io/repository/github/vstatsura/redux-hooks-next/badge/master)](https://www.codefactor.io/repository/github/vstatsura/redux-hooks-next/overview/master)
 
 ## Usage
 
